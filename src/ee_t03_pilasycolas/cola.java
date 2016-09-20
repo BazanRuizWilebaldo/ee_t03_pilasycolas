@@ -9,12 +9,14 @@ package ee_t03_pilasycolas;
  *
  * @author WILY
  */
-public class cola <T> {
+public class cola<T> {
+
+    
 
     // Declaracion de la clase de Colas
-    static int max = 10;  // Tamano maximo de la Cola
-    static int cola[] = new int[max]; // Declaracion del arreglo
-    static int frente, fin; // Indicadores de inicio y fin de la Cola
+    int max = 10;  // Tamano maximo de la Cola
+    int cola[] = new int[max]; // Declaracion del arreglo
+    int frente, fin; // Indicadores de inicio y fin de la Cola
 
     cola() { // Constructor que inicializa el frente y el final de la Cola
         frente = 0;
@@ -22,16 +24,22 @@ public class cola <T> {
         System.out.println("Cola inicializada !!!");
     }
 
-    public static void Insertar(T dato) {
+    private T o;
+    
+    /**
+     *
+     * @param t
+     */
+    public void Insertar(T o) {
         if (fin == max) { // Esta llena la Cola?
             System.out.println("\nCola llena !!!");
             return;
         }
-        cola[fin++] = dato;
+        cola[fin++] =  T ;
         System.out.println("Dato insertado !!!");
     }
 
-    public static void Eliminar() {
+    public void Eliminar() {
         System.out.println("\n\n<<< ELIMINAR >>>");
         if (frente == fin) {  // Esta vacia la Cola?
             System.out.println("\nCola vacia !!!");
@@ -40,7 +48,7 @@ public class cola <T> {
         System.out.println("Elemento eliminado: " + cola[frente++]);
     }
 
-    public static void Mostrar() {
+    public void Mostrar() {
         int i = 0;
         System.out.println("\n\n<<< MOSTRAR >>>");
         if (frente == fin) {

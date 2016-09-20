@@ -70,6 +70,18 @@ package ee_t03_pilasycolas;
         }
  
     }
+
+        public void Insertarultimo(Integer dato) {
+        Nodo<T> aux = inicio;
+            while (aux.getSiguiente() != null) {
+                aux = aux.getSiguiente();
+
+            }
+
+            Nodo q = new Nodo();
+            aux.setSiguiente(q);
+
+        }
      
      
      

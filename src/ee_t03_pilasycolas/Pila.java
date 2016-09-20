@@ -9,8 +9,11 @@ package ee_t03_pilasycolas;
  *
  * @author WILY
  */
-public class Pila<T> {
 
+public class Pila<T> {
+     T dato;
+  
+   
     int tope = -1;
     int vec[];
 
@@ -19,7 +22,7 @@ public class Pila<T> {
     }
 
     public boolean llena() {
-        if(tope == vec.length - 1) {
+        if (tope == vec.length - 1) {
             return true;
         } else {
             return false;
@@ -27,14 +30,14 @@ public class Pila<T> {
     }
 
     public boolean vacia() {
-        if(tope == -1) {
+        if (tope == -1) {
             return true;
         } else {
             return false;
         }
     }
 
-    public void push( T dato) {
+    public void push(T j) {
         if (llena() == true) {
             System.out.println("Overflow");
         } else if (tope == -1) {
